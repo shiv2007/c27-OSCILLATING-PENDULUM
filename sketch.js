@@ -53,16 +53,17 @@ function draw() {
 
   strokeWeight(8);
   stroke("yellow");
-  line(ball.position.x,ball.position.y,holder.position.x,holder.position.y)
-
-  ball.position.y = mouseY;
-  ball.position.x = mouseX;
-
-  text("Oscillate the Pendulum left and right using mouse",70,20);
+  line(ball.position.x,ball.position.y,holder.position.x,holder.position.y);
+  
+  text("Press Enter to oscillate the Pendulum left and right using mouse",40,20);
   text("Press Space Bar to set the Pendulum",100,50);
   
   if(keyCode ===32){
     ball.position.x = 200;
+  }
+  else if(keyCode===ENTER){
+    ball.position.y = mouseY;
+    ball.position.x = mouseX;
   }
 }
 
