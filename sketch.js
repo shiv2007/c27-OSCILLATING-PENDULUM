@@ -43,25 +43,25 @@ function draw() {
   background(0); 
   Engine.update(engine);
 
-  fill ("blue");
+  fill ("red");
   rectMode(CENTER);
   rect(holder.position.x,holder.position.y,200,20);
 
-  fill("green");
+  fill("blue");
   ellipseMode(RADIUS);
   ellipse(ball.position.x,ball.position.y,40);
 
   strokeWeight(8);
-  stroke("yellow");
+  stroke("green");
   line(ball.position.x,ball.position.y,holder.position.x,holder.position.y);
   
-  text("Press Enter to oscillate the Pendulum left and right using mouse",40,20);
-  text("Press Space Bar to set the Pendulum",100,50);
+  text("Press space bar to oscillate the Pendulum left and right using mouse",40,20);
+  text("Press enter key to set the Pendulum",100,50);
   
-  if(keyCode ===32){
+  if(keyCode ===ENTER){
     ball.position.x = 200;
   }
-  else if(keyCode===ENTER){
+  else if(keyCode===32){
     ball.position.y = mouseY;
     ball.position.x = mouseX;
   }
